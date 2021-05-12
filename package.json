@@ -18,5 +18,8 @@
   "homepage": "https://github.com/SharpScratchy/ui#readme",
   "dependencies": {
     "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.6"
   }
 }

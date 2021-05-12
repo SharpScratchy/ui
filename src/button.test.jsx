@@ -8,6 +8,16 @@ test("Button should be rendered with correct label", () => {
   expect(getByRole("button")).toHaveTextContent("Click me!");
 });
 
+test("Button should have a default css class", () => {
+  const { getByRole } = render(<Button label="Click me!" onClick={() => {}} />);
+  expect(getByRole("button")).toHaveAttribute("class", "button");
+});
+
+test("Button can receive customization", () => {
+  const { getByRole } = render(<Button label="Click me!" classNameSuffix="primary" onClick={() => {}} />);
+  expect(getByRole("button")).toHaveAttribute("class", "button button--primary");
+});
+
 test("Button should call onClick callback when clicked", () => {
   let clickChecker = 0;
 

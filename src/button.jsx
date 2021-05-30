@@ -1,7 +1,8 @@
 import React from "react";
+import cssClassSuffixer from "./cssClassSuffixer";
 
 const Button = ({ label, classNameSuffix, onClick }) => {
-  const className = `button${classNameSuffix ? ` button--${classNameSuffix}` : ""}`;
+  const className = cssClassSuffixer("button", classNameSuffix);
 
   return (
     <button onClick={onClick} className={className}>

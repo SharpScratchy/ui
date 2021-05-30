@@ -18,7 +18,7 @@
     "url": "https://github.com/SharpScratchy/ui/issues"
   },
   "homepage": "https://github.com/SharpScratchy/ui#readme",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^17.0.2"
   },
   "devDependencies": {

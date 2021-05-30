@@ -38,3 +38,15 @@ test("Checkbox can be checked by default", () => {
 
   expect(component).toBeChecked();
 });
+
+
+test("Checkbox can receive customization", () => {
+  const { container } = render(<Checkbox label="Click me!" classNameSuffix="primary" />);
+  const label = container.querySelector("label");
+  const input = container.querySelector("input");
+
+  expect(label).toHaveAttribute("class", "checkbox__label checkbox__label--primary");
+  expect(input).toHaveAttribute("class", "checkbox__input checkbox__input--primary");
+  expect(container.firstChild).toHaveAttribute("class", "checkbox checkbox--primary");
+});
+
